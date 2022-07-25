@@ -2,6 +2,19 @@
   "name": "frontend-clean-architecture",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Julián Darío Luna Patiño",
+    "email": "judlup@gmail.com",
+    "url": "https://judlup.dev"
+  },
+  "description": "A clean architecture for frontend development using NextJS",
+  "keywords": [
+    "frontend",
+    "clean",
+    "architecture",
+    "nextjs"
+  ],
+  "license": "GNU General Public License v3.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
