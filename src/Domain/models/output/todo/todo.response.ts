@@ -1,5 +1,5 @@
 export type TodoResponse = {
-  id: string
+  id: number
   title: string
   completed: boolean
 }

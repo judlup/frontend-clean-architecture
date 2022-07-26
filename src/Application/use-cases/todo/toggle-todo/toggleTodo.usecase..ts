@@ -1,9 +1,9 @@
-import { TodoEntity } from "@/Domain/models/input/todo/todo.entity"
+import { ITodo } from "@/Domain/interfaces/todo/ITodo.interface"
 import { ITodoRepository } from "@/Domain/repositories/todo/ITodo.repository"
 
 export async function toggleTodo(
   repository: ITodoRepository,
-  id: string
-): Promise<TodoEntity[]> {
+  id: number
+): Promise<ITodo[]> {
   return await repository.toggleTodo(id)
 }

@@ -1,8 +1,8 @@
-import { TodoEntity } from "@/Domain/models/input/todo/todo.entity"
+import { ITodo } from "@/Domain/interfaces/todo/ITodo.interface"
 
 export interface ITodoController {
-  getTodos(): Promise<TodoEntity[]>
-  addTodo(title: string): Promise<TodoEntity[]>
-  toggleTodo(id: string): Promise<TodoEntity[]>
-  removeTodo(id: string): Promise<TodoEntity[]>
+  getTodos(): Promise<ITodo[]>
+  addTodo(title: string): Promise<ITodo[]>
+  toggleTodo(id: number): Promise<ITodo[]>
+  removeTodo(id: number): Promise<ITodo[]>
 }
