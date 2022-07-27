@@ -5,7 +5,7 @@
 - [ ] Implement Zustand
 - [ ] Improve styles
 - [ ] Implement fake repository
-- [ ] Implement tests
+- [ ] Implement tests (domain, infrastructure)
 - [ ] Implement composed style for shared ui elements
 - [ ] Implement helpers
 - [ ] Implement localstore
@@ -33,6 +33,7 @@ Domain
 - use-cases
   - todo
     - ITodos.usecase.ts (dependency injection)
+    - Todos.dto.usecase.ts
 - controllers
   - todo
     - ITodo.controller.ts
@@ -76,9 +77,15 @@ Infrastructure
 
 # References
 
-[Principal Reference](https://github.com/esaraviam/dogappv1)
+- [Principal Reference](https://github.com/esaraviam/dogappv1)
 
-[Todo and Container - View Reference](https://github.com/dimitridumont/clean-architecture-front-end)
+- [Todo and Container - View Reference](https://github.com/dimitridumont/clean-architecture-front-end)
+
+- [Todo clean architecture typescript](https://codefoundation.co.za/clean-architecture-typescript-and-react)
+
+- ![Flow clean architecture](https://miro.medium.com/max/1400/1*iDwC7At7blypzZPqIAn_PQ.png)
+
+- [Image Reference](https://medium.com/@rostislavdugin/the-clean-architecture-using-react-and-typescript-a832662af803)
 
 # Notes
 

@@ -1,6 +1,14 @@
 import { ITodo } from "@/Domain/interfaces/todo/ITodo.interface"
 import { ITodoRepository } from "@/Domain/repositories/todo/ITodo.repository"
+import { IGetTodosUseCase } from "@/Domain/use-cases/todo/ITodos.usecase"
 
-export async function getTodos(repository: ITodoRepository): Promise<ITodo[]> {
-  return await repository.getTodos()
+export class GetTodosUseCase implements IGetTodosUseCase {
+  private todoRepository: ITodoRepository
+
+  constructor(_todoRepository: ITodoRepository) {
+    this.todoRepository = _todoRepository
+  }
+  async execute(): Promise<ITodo[]> {
+    return this.todoRepository.getTodos()
+  }
 }
