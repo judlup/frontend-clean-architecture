@@ -1,21 +1,20 @@
-import { PokemonsResponse } from "@/Domain/models/output/pokemon/pokemons.response"
+import { IPokemons } from "@/Domain/interfaces/pokemon/IPokemons"
 import PokemonController from "@/Infrastructure/controllers/pokemon/pokemon.controller"
 import { useEffect, useState } from "react"
 import PokemonsView from "./pokemons.view"
 
 const PokemonsContainer = () => {
-  const [pokemons, setPokemons] = useState<PokemonsResponse>({
-    count: 0,
-    results: [],
-    next: "",
-    previous: "",
-    data: [],
-  })
+  const [pokemons, setPokemons] = useState<IPokemons[]>([
+    {
+      name: "",
+      url: "",
+    },
+  ])
 
   useEffect(() => {
     const getPokemons = async () => {
       const pokemonController = new PokemonController()
-      const pokemonsres = await (await pokemonController.getPokemons()).data
+      const pokemonsres = await await await pokemonController.getPokemons()
       setPokemons(pokemonsres)
     }
     getPokemons()

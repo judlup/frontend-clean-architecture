@@ -1,5 +1,5 @@
-import { PokemonsResponse } from "@/Domain/models/output/pokemon/pokemons.response"
+import { IPokemons } from "@/Domain/interfaces/pokemon/IPokemons"
 
 export interface IGetPokemonsUseCase {
-  execute(): Promise<PokemonsResponse>
+  execute(): Promise<IPokemons[]>
 }

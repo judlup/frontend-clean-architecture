@@ -1,19 +1,19 @@
-import { PokemonsResponse } from "@/Domain/models/output/pokemon/pokemons.response"
+import { IPokemons } from "@/Domain/interfaces/pokemon/IPokemons"
 
 import styles from "./pokemons.module.scss"
 
 interface IProps {
-  pokemons: PokemonsResponse
+  pokemons: IPokemons[]
 }
 
 const PokemonsView: React.FC<IProps> = ({ pokemons }) => {
   return (
     <div className={styles.container}>
       <h1>
-        Pokemons <small>({pokemons.results.length})</small>
+        Pokemons <small>({pokemons.length})</small>
       </h1>
       <div className={styles.pokemonListcontainer}>
-        {pokemons.results.map((pokemon) => (
+        {pokemons.map((pokemon) => (
           <div className={styles.pokemonList} key={pokemon.name}>
             <span>{pokemon.name}</span>
           </div>

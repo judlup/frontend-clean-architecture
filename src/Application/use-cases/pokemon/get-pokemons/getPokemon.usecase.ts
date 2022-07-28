@@ -1,4 +1,4 @@
-import { PokemonsResponse } from "@/Domain/models/output/pokemon/pokemons.response"
+import { IPokemons } from "@/Domain/interfaces/pokemon/IPokemons"
 import { IPokemonRepository } from "@/Domain/repositories/pokemon/IPokemon.repository"
 import { IGetPokemonsUseCase } from "@/Domain/use-cases/pokemon/IPokemon.usecase"
 
@@ -9,7 +9,7 @@ export default class GetPokemonsUseCase implements IGetPokemonsUseCase {
     this.pokemonRepository = pokemonRepository
   }
 
-  public async execute(): Promise<PokemonsResponse> {
+  public async execute(): Promise<IPokemons[]> {
     return this.pokemonRepository.getPokemons()
   }
 }
