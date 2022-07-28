@@ -10,14 +10,16 @@ const TodosContainer = () => {
   useEffect(() => {
     setTodos(todos)
     async function getTodos() {
-      const todos = await TodoController.getTodos()
+      const todoController = new TodoController()
+      const todos = await todoController.getTodos()
       setTodos(todos)
     }
     getTodos()
   }, [todos])
 
   const addTodoFn = async () => {
-    const todos = await TodoController.addTodo(title)
+    const todoController = new TodoController()
+    const todos = await todoController.addTodo(title)
     setTodos([...todos])
     setTitle("")
   }
@@ -27,12 +29,14 @@ const TodosContainer = () => {
   }
 
   const changeToggleFn = async (id: number) => {
-    const todos = await TodoController.toggleTodo(id)
+    const todoController = new TodoController()
+    const todos = await todoController.toggleTodo(id)
     setTodos([...todos])
   }
 
   const changeRemoveFn = async (id: number) => {
-    const todos = await TodoController.removeTodo(id)
+    const todoController = new TodoController()
+    const todos = await todoController.removeTodo(id)
     setTodos([...todos])
   }
 

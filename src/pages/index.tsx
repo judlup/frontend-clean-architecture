@@ -1,4 +1,5 @@
 import CountContainer from "@/Infrastructure/components/count/count.container"
+import PokemonsContainer from "@/Infrastructure/components/pokemon/pokemons/pokemons.container"
 import TodosContainer from "@/Infrastructure/components/todo/todos/todos.container"
 import type { NextPage } from "next"
 import Head from "next/head"
@@ -12,8 +13,9 @@ const Home: NextPage = () => {
         <meta name="description" content="ToDo clean architecture example" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <CountContainer />
       <TodosContainer />
+      <CountContainer />
+      <PokemonsContainer />
     </div>
   )
 }

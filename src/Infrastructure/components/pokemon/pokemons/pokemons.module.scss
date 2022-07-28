@@ -1,0 +1,27 @@
+.container {
+  background-color: darkcyan;
+  color: azure;
+  border-radius: 7px;
+  padding: 10px; 
+  max-width: 100%;
+  margin-top: 10px;
+  overflow-y: auto;
+
+  h1{
+    text-align: center;
+  }
+  .pokemonListcontainer {
+    display: flex;
+    flex-direction: row;
+    .pokemonList{
+      background-color: lightseagreen; 
+      width: 120px;   
+      height: 40px;
+      text-align: center;
+      border-radius: 7px;
+      margin-bottom: 10px;
+      padding: 10px;
+      margin-left: 5px;        
+    }
+  }
+}
