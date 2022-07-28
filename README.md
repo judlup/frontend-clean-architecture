@@ -4,7 +4,7 @@
 
 - [x] Implement Zustand
 - [x] Https client implementation
-- [ ] Implement fake repository
+- [x] Implement fake repository
 - [ ] Implement localstore
 - [ ] Implement tests (domain, infrastructure)
 - [ ] Implement composed style for shared ui elements
@@ -79,6 +79,7 @@ Infrastructure
 
 - repositories
   - pokemon
+    - pokemon.fake.repository.ts
     - pokemon.repository.ts
   - todo
     - todo.repository.ts
