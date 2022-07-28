@@ -1,4 +1,4 @@
-import { PokemonsResponse } from "@/Domain/models/output/pokemon/pokemonsResponse"
+import { PokemonsResponse } from "@/Domain/models/output/pokemon/pokemons.response"
 import PokemonController from "@/Infrastructure/controllers/pokemon/pokemon.controller"
 import { useEffect, useState } from "react"
 import PokemonsView from "./pokemons.view"

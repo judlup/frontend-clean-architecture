@@ -1,5 +1,5 @@
 import { IPokemons } from "@/Domain/interfaces/pokemon/IPokemons"
-import { PokemonsResponse } from "@/Domain/models/output/pokemon/pokemonsResponse"
+import { PokemonsResponse } from "@/Domain/models/output/pokemon/pokemons.response"
 import { IPokemonRepository } from "@/Domain/repositories/pokemon/IPokemon.repository"
 import Http from "@/Infrastructure/http/http"
 

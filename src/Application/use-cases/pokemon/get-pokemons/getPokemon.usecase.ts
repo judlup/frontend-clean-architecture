@@ -1,4 +1,4 @@
-import { PokemonsResponse } from "@/Domain/models/output/pokemon/pokemonsResponse"
+import { PokemonsResponse } from "@/Domain/models/output/pokemon/pokemons.response"
 import { IPokemonRepository } from "@/Domain/repositories/pokemon/IPokemon.repository"
 import { IGetPokemonsUseCase } from "@/Domain/use-cases/pokemon/IPokemon.usecase"
 

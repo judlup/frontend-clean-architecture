@@ -1,4 +1,4 @@
-import { PokemonsResponse } from "@/Domain/models/output/pokemon/pokemonsResponse"
+import { PokemonsResponse } from "@/Domain/models/output/pokemon/pokemons.response"
 
 export interface IPokemonController {
   getPokemons(): Promise<PokemonsResponse>

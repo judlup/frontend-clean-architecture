@@ -1,4 +1,4 @@
-import PokemonEntity from "../../input/pokemon/pokemmon.entity"
+import PokemonEntity from "../../input/pokemon/pokemon.entity"
 
 export type PokemonsResponse = {
   count: number

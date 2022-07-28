@@ -1,4 +1,4 @@
-import { PokemonsResponse } from "@/Domain/models/output/pokemon/pokemonsResponse"
+import { PokemonsResponse } from "@/Domain/models/output/pokemon/pokemons.response"
 
 import styles from "./pokemons.module.scss"
 

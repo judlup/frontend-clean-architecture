@@ -3,7 +3,7 @@
 # ToDo
 
 - [x] Implement Zustand
-- [ ] Https client implementation ([Axios](https://blog.bitsrc.io/zustands-guide-to-simple-state-management-12c654c69990))
+- [x] Https client implementation
 - [ ] Implement fake repository
 - [ ] Implement localstore
 - [ ] Implement tests (domain, infrastructure)
@@ -18,22 +18,36 @@ Domain
 
 - models
   - input
+    - pokemon
+      - pokemon.entity.ts
     - todo
       - todo.entity.ts
   - output
+    - pokemon
+      - pokemon.response.ts
     - todo
       - todo.response.ts
 - interfaces
+  - http
+    - IHttp.ts
+  - pokemon
+    - IPokemons.ts
   - todo
     - ITodo
 - repositories
+  - pokemon
+    - IPokemon.repository.ts
   - todo
     - ITodo.repository.ts
 - use-cases
+  - pokemon
+    - IPokemon.use.case.ts
   - todo
     - ITodos.usecase.ts (dependency injection)
     - Todos.dto.usecase.ts
 - controllers
+  - pokemon
+    - IPokemon.controller.ts
   - todo
     - ITodo.controller.ts
 - stores
@@ -48,6 +62,9 @@ Domain
 Application/Use Cases
 
 - use-cases
+  - pokemon
+    - get-pokemons
+      - getPokemon.usecase.ts
   - todo
     - add-todo
     - addTodo.usecase.ts
@@ -61,16 +78,27 @@ Application/Use Cases
 Infrastructure
 
 - repositories
+  - pokemon
+    - pokemon.repository.ts
   - todo
     - todo.repository.ts
 - controllers
+  - pokemon
+    - pokemon.controller.ts
   - todo
     - todo.controller.ts
+- http
+  - http.ts
 - components -> based on controller interface [Reference 1]
   - count
     - count.container.tsx
     - count.view.tsx
     - count.module.scss
+  - pokemon
+    - pokemons
+      - pokemon.container.ts
+      - pokemon.view.ts
+      - pokemon.module.scss
   - todo
     - todo
     - todos.container.tsx
