@@ -1,19 +1,20 @@
 import { ITodo } from "@/Domain/interfaces/todo/ITodo.interface"
 import TodoController from "@/Infrastructure/controllers/todo/todo.controller"
 import { useEffect, useState } from "react"
-import GetTodosView from "./getTodos.view"
+import TodosView from "./todos.view"
 
-const GetTodosContainer = () => {
+const TodosContainer = () => {
   const [todos, setTodos] = useState<ITodo[]>([])
   const [title, setTitle] = useState<string>("")
 
   useEffect(() => {
+    setTodos(todos)
     async function getTodos() {
       const todos = await TodoController.getTodos()
       setTodos(todos)
     }
     getTodos()
-  }, [])
+  }, [todos])
 
   const addTodoFn = async () => {
     const todos = await TodoController.addTodo(title)
@@ -36,15 +37,17 @@ const GetTodosContainer = () => {
   }
 
   return (
-    <GetTodosView
-      todos={todos}
-      addTodo={addTodoFn}
-      changeTitle={changeTitleFn}
-      title={title}
-      changeToggle={changeToggleFn}
-      changeRemove={changeRemoveFn}
-    />
+    <>
+      <TodosView
+        todos={todos}
+        addTodo={addTodoFn}
+        changeTitle={changeTitleFn}
+        title={title}
+        changeToggle={changeToggleFn}
+        changeRemove={changeRemoveFn}
+      />
+    </>
   )
 }
 
-export default GetTodosContainer
+export default TodosContainer

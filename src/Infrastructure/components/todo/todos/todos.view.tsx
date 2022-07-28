@@ -1,7 +1,7 @@
 import { ITodo } from "@/Domain/interfaces/todo/ITodo.interface"
-import styles from "./getTodos.module.scss"
+import styles from "./todos.module.scss"
 
-interface Props {
+interface IProps {
   todos: ITodo[]
   title: string
   addTodo: () => void
@@ -10,7 +10,7 @@ interface Props {
   changeRemove: (id: number) => void
 }
 
-const GetTodosView: React.FC<Props> = ({
+const TodosView: React.FC<IProps> = ({
   todos,
   title,
   addTodo,
@@ -21,14 +21,18 @@ const GetTodosView: React.FC<Props> = ({
   return (
     <div className={styles.container}>
       <h1>Get Todos</h1>
-      {todos.map((todo: ITodo) => (
-        <li key={todo.id}>
-          <span onClick={() => changeToggle(todo.id)}>
-            {todo.title} - {todo.isDone ? "Done " : "Not Done "}
-          </span>
-          <button onClick={() => changeRemove(todo.id)}>Remove</button>
-        </li>
-      ))}
+      {todos.length == 0 ? (
+        <p>No todos</p>
+      ) : (
+        todos.map((todo: ITodo) => (
+          <li key={todo.id}>
+            <span onClick={() => changeToggle(todo.id)}>
+              {todo.title} - {todo.isDone ? "Done " : "Not Done "}
+            </span>
+            <button onClick={() => changeRemove(todo.id)}>Remove</button>
+          </li>
+        ))
+      )}
       <input
         type={"text"}
         placeholder={"Title"}
@@ -40,4 +44,4 @@ const GetTodosView: React.FC<Props> = ({
   )
 }
 
-export default GetTodosView
+export default TodosView

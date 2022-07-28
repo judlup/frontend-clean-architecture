@@ -1,0 +1,17 @@
+.container {
+  text-align: center;
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 7px;
+  background-color: #eeeeee;
+  .counter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #000000;
+  }
+  .input {
+    width: 50px;    
+    text-align: center;
+    font-weight: bolder;
+  }
+}
