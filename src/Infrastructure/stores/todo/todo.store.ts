@@ -2,7 +2,7 @@
 This is just an example of how to use the store, Todo functionality is not implemented based on this.
 */
 
-import { ITodoStore } from "@/Domain/stores/todo/ITodo.store"
+import { ITodoStore } from "@/Domain/utilities/stores/todo/ITodo.store"
 import create from "zustand"
 import { persist } from "zustand/middleware"
 

@@ -1,4 +1,4 @@
-import { IHttp } from "@/Domain/interfaces/http/IHttp"
+import { IHttp } from "@/Domain/utilities/http/IHttp"
 import axios from "axios"
 
 export default class Http implements IHttp {

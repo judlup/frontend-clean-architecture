@@ -1,4 +1,4 @@
-import { ICountStore } from "@/Domain/stores/count/ICount.store"
+import { ICountStore } from "@/Domain/utilities/stores/count/ICount.store"
 import create from "zustand"
 import { persist } from "zustand/middleware"
 

@@ -1,4 +1,4 @@
-import { ICountStore } from "@/Domain/stores/count/ICount.store"
+import { ICountStore } from "@/Domain/utilities/stores/count/ICount.store"
 import { useCountStore } from "@/Infrastructure/stores/count/count.store"
 import { useEffect, useState } from "react"
 import CountView from "./count.view"
