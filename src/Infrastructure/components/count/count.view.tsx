@@ -21,10 +21,16 @@ const CountView: React.FC<IProps> = ({
 }) => {
   return (
     <div className={styles.container}>
-      <h2>Zustand State</h2>
-      <div className={styles.counter}>{count}</div>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
+      <h2 id="title">Zustand State</h2>
+      <div className={styles.counter} data-testid="counter">
+        {count}
+      </div>
+      <button data-testid="increment" onClick={increment}>
+        Increment
+      </button>
+      <button onClick={decrement} data-testid="decrement">
+        Decrement
+      </button>
       <br />
       <button onClick={() => incrementFixed(countFixed | 1)}>
         Increment in

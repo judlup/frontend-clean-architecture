@@ -1,9 +1,10 @@
 import { ICountStore } from "@/Domain/utilities/stores/count/ICount.store"
 import { useCountStore } from "@/Infrastructure/stores/count/count.store"
+import type { NextPage } from "next"
 import { useEffect, useState } from "react"
 import CountView from "./count.view"
 
-const CountContainer = () => {
+const CountContainer: NextPage = () => {
   const [mounted, setMounted] = useState(false)
 
   const count = useCountStore((state: ICountStore) => state.count)
