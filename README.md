@@ -5,7 +5,7 @@
 - [x] Implement Zustand
 - [x] Https client implementation
 - [x] Implement fake repository
-- [x] Implement unit tests Jest (domain, infrastructure)
+- [x] Implement unit tests Jest (application, infrastructure)
 - [ ] Implement Playwright integration test
 - [ ] Implement utilities
 - [ ] Implement composed style for shared ui elements
