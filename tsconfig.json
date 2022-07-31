@@ -4,7 +4,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": true,    
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -13,8 +13,26 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {          
+      "@/Infrastructure/*": [
+        "src/Infrastructure/*"
+      ],
+      "@/Domain/*": [
+        "src/Domain/*"
+      ],
+      "@/Application/*": [
+        "src/Application/*"
+      ],
+      "@/Test/*": [
+        "src/Test/*"
+      ],
+      "@/pages/*": [
+        "src/pages/*"
+      ],
+    },
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.config.js"],
   "exclude": ["node_modules"]
 }
