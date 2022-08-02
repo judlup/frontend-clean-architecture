@@ -6,9 +6,9 @@
 - [x] Https client implementation
 - [x] Implement fake repository
 - [x] Implement unit tests Jest (application, infrastructure)
+- [ ] Implement styled components for shared ui elements
 - [ ] Implement Playwright integration test
 - [ ] Implement utilities
-- [ ] Implement composed style for shared ui elements
 - [ ] Implement localstore
 - [x] How to implement useCases interfaces
 
@@ -142,6 +142,10 @@ Infrastructure
 - [NextJS basic setup NextJS](https://youtu.be/0DK7FX79WI0)
 
 - [Playwrigth implementation example](https://youtu.be/ykF3Pff6Zo8)
+
+- [Styled components example](https://codesandbox.io/s/github/vercel/next.js/tree/canary/examples/with-styled-components?file=/components/cards.tsx)
+
+- [Styled components NextJS's example](https://github.com/vercel/next.js/tree/canary/examples/with-styled-components)
 
 # Notes
 
